@@ -1,0 +1,397 @@
+.boys-1-main-container {
+	position: absolute;
+	top: 5vh;
+	display: flex;
+	justify-content: center;
+}
+
+.boys-1-container {
+	width: 80vw;
+	height: 85vh;
+	display: flex;
+	justify-content: center;
+	background-color: white;
+	position: relative;
+	border-radius: 10px;
+	border: 3px solid #a5a5a5;
+}
+
+/* close-btn style start  */
+.boys-1-container .close-btn-boys-1 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	cursor: pointer;
+	display: flex;
+	width: fit-content;
+	background-color: #d7e2ea;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+
+.boys-1-container .close-btn-boys-1:hover {
+	transform: scale(0.9);
+}
+
+.boys-1-container .close-btn-boys-1:active {
+	transform: scale(1.1);
+}
+
+.boys-1-container .close-btn-boys-1 i {
+	font-size: 20px;
+	transition: all 0.3s;
+	color: #d90429;
+}
+
+.boys-1-container .close-btn-boys-1 i:hover {
+	transform: rotate(180deg);
+}
+/* close-btn style end  */
+
+.boys-1-container .boys-1-wrapper span {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-color: #0ead69;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+.boys-1-container .boys-1-wrapper span.active {
+	background-color: #d90429;
+	color: white;
+	font-weight: 600;
+}
+
+.boys-1-container .boys-1-wrapper span:hover {
+	background-color: #1b479e;
+	color: white;
+}
+
+.boys-1-container .boys-1-wrapper span.visibility-none {
+	visibility: hidden;
+}
+
+/* layout-style start  */
+
+.boys-1-container .boys-1-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.boys-1-wrapper #layout-1 {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-1::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+/* for count style start  */
+.boys-1-wrapper #layout-1 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	top: 47%;
+	left: 29%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.boys-1-wrapper #layout-1 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-1 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-1 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-1 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-1 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
+.boys-1-wrapper #layout-1 .exit-message {
+	position: absolute;
+	left: 13%;
+	bottom: 40%;
+}
+
+.boys-1-wrapper #layout-1 .exit-message p {
+	margin: 0;
+}
+
+.boys-1-wrapper #layout-1 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #left #up {
+	height: 54%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #left #down {
+	height: 37%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-1 #right {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.boys-1-wrapper #layout-2 {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-2::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+/* for count style start  */
+.boys-1-wrapper #layout-2 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	top: 47%;
+	left: 29%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.boys-1-wrapper #layout-2 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-2 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-2 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-2 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-2 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
+.boys-1-wrapper #layout-2 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-2 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-3 {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+.boys-1-wrapper #layout-3::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 3px;
+	background-color: #a5a5a5;
+	height: 91%;
+}
+
+/* for count style start  */
+.boys-1-wrapper #layout-3 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	top: 47%;
+	left: 29%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.boys-1-wrapper #layout-3 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-3 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-3 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-3 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-3 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
+.boys-1-wrapper #layout-3 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-3 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-4 {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+}
+
+/* for count style start  */
+.boys-1-wrapper #layout-4 #count-section {
+	position: absolute;
+	transform: rotate(90deg);
+	display: flex;
+	top: 47%;
+	left: 29%;
+	width: -moz-fit-content;
+	width: fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.boys-1-wrapper #layout-4 #count-section p {
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.boys-1-wrapper #layout-4 #count-section p:first-child {
+	padding-right: 20px;
+}
+
+.boys-1-wrapper #layout-4 #count-section .booked-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #0ead69;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-4 #count-section .empty-seat-style {
+	width: 20px;
+	height: 20px;
+	background-color: #d90429;
+	border-radius: 3px;
+}
+
+.boys-1-wrapper #layout-4 #count-section p h6 {
+	margin: 0;
+	font-weight: 600;
+}
+/* for count style end */
+
+.boys-1-wrapper #layout-4 #left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.boys-1-wrapper #layout-4 #right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+/* layout-style end */
