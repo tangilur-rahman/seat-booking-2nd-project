@@ -5,11 +5,8 @@ import GenerateReport from "../../components/GenerateReport/GenerateReport";
 
 // internal components
 import { GetContextApi } from "../../ContextApi";
-import Basement from "../Basement/Basement";
-import BoysLab1 from "../BoysLab1/BoysLab1";
-import BoysLab2 from "../BoysLab2/BoysLab2";
-import GirlsLab1 from "../GirlsLab1/GirlsLab1";
-import GirlsLab2 from "../GirlsLab2/GirlsLab2";
+import BoysLab from "../BoysLab/BoysLab";
+import GirlsLab from "../GirlsLab/GirlsLab";
 import "./Home.css";
 
 const Home = () => {
@@ -22,39 +19,11 @@ const Home = () => {
 	// for lab selection
 	const [selectedLab, setSelectedLab] = useState("");
 
-	// girls-lab-1 states
-	const [girlsLab_1L_1, setGirlsLab_1L_1] = useState([]);
-	const [girlsLab_1L_2, setGirlsLab_1L_2] = useState([]);
-	const [girlsLab_1L_3, setGirlsLab_1L_3] = useState([]);
-	const [girlsLab_1L_4, setGirlsLab_1L_4] = useState([]);
-	const [girlsLab_1L_5, setGirlsLab_1L_5] = useState([]);
-	const [girlsLab_1L_6, setGirlsLab_1L_6] = useState([]);
+	// girls-lab booking counter state
+	const [girlsLabB, setGirlsLabB] = useState([]);
 
-	// girls-lab-2 states
-	const [girlsLab_2L_1, setGirlsLab_2L_1] = useState([]);
-	const [girlsLab_2L_2, setGirlsLab_2L_2] = useState([]);
-	const [girlsLab_2L_3, setGirlsLab_2L_3] = useState([]);
-	const [girlsLab_2L_4, setGirlsLab_2L_4] = useState([]);
-	const [girlsLab_2L_5, setGirlsLab_2L_5] = useState([]);
-
-	// basement state
-	const [basementL_1, setBasementL_1] = useState([]);
-	const [basementL_2, setBasementL_2] = useState([]);
-	const [basementL_3, setBasementL_3] = useState([]);
-	const [basementL_4, setBasementL_4] = useState([]);
-
-	// boys-lab-1 states
-	const [boysLab_1L_1, setBoysLab_1L_1] = useState([]);
-	const [boysLab_1L_2, setBoysLab_1L_2] = useState([]);
-	const [boysLab_1L_3, setBoysLab_1L_3] = useState([]);
-	const [boysLab_1L_4, setBoysLab_1L_4] = useState([]);
-
-	// boys-lab-2 states
-	const [boysLab_2L_1, setBoysLab_2L_1] = useState([]);
-	const [boysLab_2L_2, setBoysLab_2L_2] = useState([]);
-	const [boysLab_2L_3, setBoysLab_2L_3] = useState([]);
-	const [boysLab_2L_4, setBoysLab_2L_4] = useState([]);
-	const [boysLab_2L_5, setBoysLab_2L_5] = useState([]);
+	// boys-lab booking counter state
+	const [boysLabB, setBoysLabB] = useState([]);
 
 	// for getting those document which are updated today start
 	const [generateT, setGenerateT] = useState("");
@@ -132,313 +101,74 @@ const Home = () => {
 						</div>
 
 						<div className="section-container">
-							<div className="row-1">
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-girls-lab-1")}
-								>
-									<div id="header">
-										<h5>Ridhima Girls Lab 1</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>105</b>{" "}
-											</span>
-											<span>
-												Booked Seat :{" "}
-												<b>
-													{girlsLab_1L_1.length +
-														girlsLab_1L_2.length +
-														girlsLab_1L_3.length +
-														girlsLab_1L_4.length +
-														girlsLab_1L_5.length +
-														girlsLab_1L_6.length}
-												</b>{" "}
-											</span>
-											<span>
-												Empty Seat :{" "}
-												<b>
-													{105 -
-														(girlsLab_1L_1.length +
-															girlsLab_1L_2.length +
-															girlsLab_1L_3.length +
-															girlsLab_1L_4.length +
-															girlsLab_1L_5.length +
-															girlsLab_1L_6.length)}
-												</b>{" "}
-											</span>
-										</div>
+							{/* girls lab start  */}
+							<div
+								className="section"
+								onClick={() => setSelectedLab("girls-lab")}
+							>
+								<div id="header">
+									<h5>Girls Lab</h5>
+									<div id="counter">
+										<span>
+											Total Seat : <b>64</b>{" "}
+										</span>
+										<span>
+											Booked Seat : <b>{girlsLabB}</b>{" "}
+										</span>
+										<span>
+											Empty Seat : <b>{64 - girlsLabB}</b>{" "}
+										</span>
 									</div>
-
-									<div id="lab-container">
-										<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
-									</div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
 								</div>
 
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-girls-lab-2")}
-								>
-									<div id="header">
-										<h5>Ridhima Girls Lab 2</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>84</b>{" "}
-											</span>
-											<span>
-												Booked Seat :{" "}
-												<b>
-													{girlsLab_2L_1.length +
-														girlsLab_2L_2.length +
-														girlsLab_2L_3.length +
-														girlsLab_2L_4.length +
-														girlsLab_2L_5.length}
-												</b>{" "}
-											</span>
-											<span>
-												Empty Seat :{" "}
-												<b>
-													{84 -
-														(girlsLab_2L_1.length +
-															girlsLab_2L_2.length +
-															girlsLab_2L_3.length +
-															girlsLab_2L_4.length +
-															girlsLab_2L_5.length)}
-												</b>{" "}
-											</span>
-										</div>
-									</div>
-
-									<div id="lab-container">
-										<img src="/assets/images/girls-lab-2.png" alt="lab-img" />
-									</div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
+								<div id="lab-container">
+									<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
 								</div>
 
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-basement-lab")}
-								>
-									<div id="header">
-										<h5>Ridhima Basement Lab</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>91</b>{" "}
-											</span>
-											<span>
-												Booked Seat :{" "}
-												<b>
-													{basementL_1.length +
-														basementL_2.length +
-														basementL_3.length +
-														basementL_4.length}
-												</b>{" "}
-											</span>
-											<span>
-												Empty Seat :{" "}
-												<b>
-													{91 -
-														(basementL_1.length +
-															basementL_2.length +
-															basementL_3.length +
-															basementL_4.length)}
-												</b>{" "}
-											</span>
-										</div>
-									</div>
-
-									<div id="lab-container">
-										<img src="/assets/images/basement.png" alt="lab-img" />
-									</div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
-								</div>
+								<h6 className="view-seats">
+									<span className="hover-link">View Seats</span>
+								</h6>
 							</div>
+							{/* girls lab end  */}
 
-							<div className="row-2">
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-boys-lab-1")}
-								>
-									<div id="header">
-										<h5>Ridhima Boys Labs 1</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>88</b>{" "}
-											</span>
-											<span>
-												Booked Seat :{" "}
-												<b>
-													{boysLab_1L_1.length +
-														boysLab_1L_2.length +
-														boysLab_1L_3.length +
-														boysLab_1L_4.length}
-												</b>{" "}
-											</span>
-											<span>
-												Empty Seat :{" "}
-												<b>
-													{88 -
-														(boysLab_1L_1.length +
-															boysLab_1L_2.length +
-															boysLab_1L_3.length +
-															boysLab_1L_4.length)}
-												</b>{" "}
-											</span>
-										</div>
-									</div>
-
-									<div id="lab-container">
-										<img src="/assets/images/boys-lab-1.png" alt="lab-img" />
-									</div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
-								</div>
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-boys-lab-2")}
-								>
-									<div id="header">
-										<h5>Ridhima Boys Lab 2</h5>
-										<div id="counter">
-											<span>
-												Total Seat : <b>117</b>{" "}
-											</span>
-											<span>
-												Booked Seat :{" "}
-												<b>
-													{boysLab_2L_1.length +
-														boysLab_2L_2.length +
-														boysLab_2L_3.length +
-														boysLab_2L_4.length +
-														boysLab_2L_5.length}
-												</b>{" "}
-											</span>
-											<span>
-												Empty Seat :{" "}
-												<b>
-													{117 -
-														(boysLab_2L_1.length +
-															boysLab_2L_2.length +
-															boysLab_2L_3.length +
-															boysLab_2L_4.length +
-															boysLab_2L_5.length)}
-												</b>{" "}
-											</span>
-										</div>
-									</div>
-
-									<div id="lab-container">
-										<img src="/assets/images/boys-lab-2.png" alt="lab-img" />
-									</div>
-
-									<h6 className="view-seats">
-										<span className="hover-link">View Seats</span>
-									</h6>
-								</div>
-
-								<div
-									className="section"
-									onClick={() => setSelectedLab("ridhima-theory-lab")}
-								>
-									<div id="header">
-										<h5>Ridhima Theory Lab</h5>
-									</div>
-
-									<div id="lab-container" className="coming-soon">
-										<h4>Coming Soon . . .</h4>{" "}
+							{/* boys lab start  */}
+							<div
+								className="section"
+								onClick={() => setSelectedLab("boys-lab")}
+							>
+								<div id="header">
+									<h5>Boys Lab</h5>
+									<div id="counter">
+										<span>
+											Total Seat : <b>109</b>{" "}
+										</span>
+										<span>
+											Booked Seat : <b>{boysLabB}</b>{" "}
+										</span>
+										<span>
+											Empty Seat : <b>{109 - boysLabB}</b>{" "}
+										</span>
 									</div>
 								</div>
+
+								<div id="lab-container">
+									<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
+								</div>
+
+								<h6 className="view-seats">
+									<span className="hover-link">View Seats</span>
+								</h6>
 							</div>
+							{/* boys lab end  */}
 						</div>
 					</div>
 
-					{selectedLab === "ridhima-girls-lab-1" && (
-						<GirlsLab1
-							setSelectedLab={setSelectedLab}
-							girlsLab_1L_1={girlsLab_1L_1}
-							setGirlsLab_1L_1={setGirlsLab_1L_1}
-							girlsLab_1L_2={girlsLab_1L_2}
-							setGirlsLab_1L_2={setGirlsLab_1L_2}
-							girlsLab_1L_3={girlsLab_1L_3}
-							setGirlsLab_1L_3={setGirlsLab_1L_3}
-							girlsLab_1L_4={girlsLab_1L_4}
-							setGirlsLab_1L_4={setGirlsLab_1L_4}
-							girlsLab_1L_5={girlsLab_1L_5}
-							setGirlsLab_1L_5={setGirlsLab_1L_5}
-							girlsLab_1L_6={girlsLab_1L_6}
-							setGirlsLab_1L_6={setGirlsLab_1L_6}
-						/>
+					{selectedLab === "girls-lab" && (
+						<GirlsLab girlsLabB={girlsLabB} setGirlsLabB={setGirlsLabB} />
 					)}
 
-					{selectedLab === "ridhima-girls-lab-2" && (
-						<GirlsLab2
-							setSelectedLab={setSelectedLab}
-							girlsLab_2L_1={girlsLab_2L_1}
-							setGirlsLab_2L_1={setGirlsLab_2L_1}
-							girlsLab_2L_2={girlsLab_2L_2}
-							setGirlsLab_2L_2={setGirlsLab_2L_2}
-							girlsLab_2L_3={girlsLab_2L_3}
-							setGirlsLab_2L_3={setGirlsLab_2L_3}
-							girlsLab_2L_4={girlsLab_2L_4}
-							setGirlsLab_2L_4={setGirlsLab_2L_4}
-							girlsLab_2L_5={girlsLab_2L_5}
-							setGirlsLab_2L_5={setGirlsLab_2L_5}
-						/>
-					)}
-
-					{selectedLab === "ridhima-basement-lab" && (
-						<Basement
-							setSelectedLab={setSelectedLab}
-							basementL_1={basementL_1}
-							setBasementL_1={setBasementL_1}
-							basementL_2={basementL_2}
-							setBasementL_2={setBasementL_2}
-							basementL_3={basementL_3}
-							setBasementL_3={setBasementL_3}
-							basementL_4={basementL_4}
-							setBasementL_4={setBasementL_4}
-						/>
-					)}
-
-					{selectedLab === "ridhima-boys-lab-1" && (
-						<BoysLab1
-							setSelectedLab={setSelectedLab}
-							boysLab_1L_1={boysLab_1L_1}
-							setBoysLab_1L_1={setBoysLab_1L_1}
-							boysLab_1L_2={boysLab_1L_2}
-							setBoysLab_1L_2={setBoysLab_1L_2}
-							boysLab_1L_3={boysLab_1L_3}
-							setBoysLab_1L_3={setBoysLab_1L_3}
-							boysLab_1L_4={boysLab_1L_4}
-							setBoysLab_1L_4={setBoysLab_1L_4}
-						/>
-					)}
-
-					{selectedLab === "ridhima-boys-lab-2" && (
-						<BoysLab2
-							setSelectedLab={setSelectedLab}
-							boysLab_2L_1={boysLab_2L_1}
-							setBoysLab_2L_1={setBoysLab_2L_1}
-							boysLab_2L_2={boysLab_2L_2}
-							setBoysLab_2L_2={setBoysLab_2L_2}
-							boysLab_2L_3={boysLab_2L_3}
-							setBoysLab_2L_3={setBoysLab_2L_3}
-							boysLab_2L_4={boysLab_2L_4}
-							setBoysLab_2L_4={setBoysLab_2L_4}
-							boysLab_2L_5={boysLab_2L_5}
-							setBoysLab_2L_5={setBoysLab_2L_5}
-						/>
+					{selectedLab === "boys-lab" && (
+						<BoysLab boysLabB={boysLabB} setBoysLabB={setBoysLabB} />
 					)}
 
 					{generateT && (
