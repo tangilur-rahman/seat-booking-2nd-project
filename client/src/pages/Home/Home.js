@@ -172,7 +172,6 @@ const Home = () => {
 
 					{selectedLab === "boys-lab" && (
 						<BoysLab
-							boysLabB={boysLabB}
 							setBoysLabB={setBoysLabB}
 							setSelectedLab={setSelectedLab}
 						/>
