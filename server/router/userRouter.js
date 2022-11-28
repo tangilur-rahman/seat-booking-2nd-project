@@ -35,14 +35,14 @@ user.post("/submit", async (req, res) => {
 			getDay
 		} = req.body;
 
-		// for (let index = 1; index <= 84; index++) {
+		// for (let index = 1; index <= 64; index++) {
 		// 	const documents = await userModel({
 		// 		student_name: "",
 		// 		student_number: "",
 		// 		guardian_name: "",
 		// 		guardian_number: "",
 		// 		days_left: null,
-		// 		frow_where: "ridhima-girls-lab-2",
+		// 		frow_where: "girls-lab",
 		// 		booking_seat: index
 		// 	});
 

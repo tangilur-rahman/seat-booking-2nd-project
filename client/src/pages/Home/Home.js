@@ -113,10 +113,10 @@ const Home = () => {
 											Total Seat : <b>64</b>{" "}
 										</span>
 										<span>
-											Booked Seat : <b>{girlsLabB}</b>{" "}
+											Booked Seat : <b>{girlsLabB.length}</b>{" "}
 										</span>
 										<span>
-											Empty Seat : <b>{64 - girlsLabB}</b>{" "}
+											Empty Seat : <b>{64 - girlsLabB.length}</b>{" "}
 										</span>
 									</div>
 								</div>
@@ -164,11 +164,18 @@ const Home = () => {
 					</div>
 
 					{selectedLab === "girls-lab" && (
-						<GirlsLab girlsLabB={girlsLabB} setGirlsLabB={setGirlsLabB} />
+						<GirlsLab
+							setGirlsLabB={setGirlsLabB}
+							setSelectedLab={setSelectedLab}
+						/>
 					)}
 
 					{selectedLab === "boys-lab" && (
-						<BoysLab boysLabB={boysLabB} setBoysLabB={setBoysLabB} />
+						<BoysLab
+							boysLabB={boysLabB}
+							setBoysLabB={setBoysLabB}
+							setSelectedLab={setSelectedLab}
+						/>
 					)}
 
 					{generateT && (
