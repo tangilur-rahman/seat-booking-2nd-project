@@ -122,7 +122,7 @@ const Home = () => {
 								</div>
 
 								<div id="lab-container">
-									<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
+									<img src="/assets/images/girls-lab.png" alt="lab-img" />
 								</div>
 
 								<h6 className="view-seats">
@@ -143,16 +143,16 @@ const Home = () => {
 											Total Seat : <b>109</b>{" "}
 										</span>
 										<span>
-											Booked Seat : <b>{boysLabB}</b>{" "}
+											Booked Seat : <b>{boysLabB.length}</b>{" "}
 										</span>
 										<span>
-											Empty Seat : <b>{109 - boysLabB}</b>{" "}
+											Empty Seat : <b>{109 - boysLabB.length}</b>{" "}
 										</span>
 									</div>
 								</div>
 
 								<div id="lab-container">
-									<img src="/assets/images/girls-lab-1.png" alt="lab-img" />
+									<img src="/assets/images/boys-lab.png" alt="lab-img" />
 								</div>
 
 								<h6 className="view-seats">

@@ -140,7 +140,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -205,7 +205,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -270,7 +270,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 															: ""
 														: ""}
 
-													{value.booking_seat}
+													{/* {value.booking_seat} */}
 												</span>
 											);
 										})
@@ -347,7 +347,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -412,7 +412,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -481,7 +481,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -550,7 +550,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -623,7 +623,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -688,7 +688,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -757,7 +757,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -822,7 +822,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 																: ""
 															: ""}
 
-														{value.booking_seat}
+														{/* {value.booking_seat} */}
 													</span>
 												);
 											})
@@ -891,7 +891,7 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 															: ""
 														: ""}
 
-													{value.booking_seat}
+													{/* {value.booking_seat} */}
 												</span>
 											);
 										})
