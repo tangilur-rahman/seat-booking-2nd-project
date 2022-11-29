@@ -50,27 +50,7 @@
 }
 /* close-btn style end  */
 
-/* entry gate container style start  */
-.boys-lab-container .entry-gate-container {
-	position: absolute;
-	width: fit-content;
-	left: 0;
-	top: 44%;
-	display: flex;
-	align-items: center;
-}
-
-.boys-lab-container .entry-gate-container i {
-	font-size: 20px;
-}
-
-.boys-lab-container .entry-gate-container p {
-	margin: 0;
-	padding-left: 10px;
-	font-weight: 500;
-}
-/* entry gate container style end */
-
+/* seats style start  */
 .boys-lab-container .boys-lab-wrapper span {
 	display: inline-block;
 	width: 35px;
@@ -98,12 +78,15 @@
 .boys-lab-container .boys-lab-wrapper span.visibility-none {
 	visibility: hidden;
 }
+/* seats style start  */
 
 /* layout-style start  */
 .boys-lab-container .boys-lab-wrapper {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	height: 100%;
+	border: 1px solid red;
 }
 
 /* layout style start  */
@@ -112,15 +95,54 @@
 	flex-grow: 1;
 	width: 100%;
 	padding: 10px 0 0px 10px;
+	border: 1px solid red;
 }
 
+/* layout-1 style start  */
 .boys-lab-wrapper #when-layout-1 {
-	border-top: 3px solid #a5a5a5;
-	border-right: 3px solid #a5a5a5;
-	border-left: 3px solid #a5a5a5;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	padding-top: 40px;
+	display: flex;
+	flex-direction: column;
 }
+
+.boys-lab-wrapper #when-layout-1 #up {
+	display: flex;
+	width: 93%;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.boys-lab-wrapper #when-layout-1 #up #left {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+}
+
+.boys-lab-wrapper #when-layout-1 #up #right {
+	display: flex;
+	justify-content: space-evenly;
+	width: 40%;
+	padding-left: 35px;
+	position: relative;
+}
+
+.boys-lab-wrapper #when-layout-1 #up #right::after {
+	content: "";
+	height: 2.6px;
+	width: 73%;
+	background-color: #a5a5a5;
+	position: absolute;
+	bottom: -12px;
+}
+
+.boys-lab-wrapper #when-layout-1 #down {
+	display: flex;
+	width: 55.9%;
+	justify-content: space-between;
+	border-top: 3px solid #a5a5a5;
+	padding-top: 10px;
+}
+/* layout-1 style end  */
 
 .boys-lab-wrapper #when-layout-2 {
 	border-right: 3px solid #a5a5a5;
