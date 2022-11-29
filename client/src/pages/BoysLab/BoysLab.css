@@ -207,10 +207,52 @@
 }
 /* layout-2 style end */
 
+/* .layout-3 style start  */
 .boys-lab-wrapper #when-layout-3 {
-	border-right: 3px solid #a5a5a5;
-	border-left: 3px solid #a5a5a5;
+	display: flex;
+	border: 1px solid red;
+	justify-content: space-between;
 }
+
+.boys-lab-wrapper #when-layout-3 #left {
+	display: flex;
+	flex-direction: column;
+	width: 47%;
+}
+
+.boys-lab-wrapper #when-layout-3 #left #up {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.boys-lab-wrapper #when-layout-3 #left #down {
+	display: flex;
+	justify-content: space-between;
+	border-top: 3px solid #a5a5a5;
+	padding-top: 10px;
+}
+
+.boys-lab-wrapper #when-layout-3 #right {
+	display: flex;
+	flex-direction: column;
+	margin-right: 5px;
+	width: 47%;
+}
+
+.boys-lab-wrapper #when-layout-3 #right #up {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+
+.boys-lab-wrapper #when-layout-3 #right #down {
+	display: flex;
+	justify-content: space-between;
+	border-top: 3px solid #a5a5a5;
+	padding-top: 10px;
+}
+/* .layout-3 style end */
 
 .boys-lab-wrapper #when-layout-4 {
 	border-right: 3px solid #a5a5a5;
