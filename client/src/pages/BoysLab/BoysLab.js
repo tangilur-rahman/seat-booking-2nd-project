@@ -276,6 +276,11 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 										})
 										.splice(13, 9)}
 								</div>
+
+								<div id="entry-gate">
+									<i class="fa-solid fa-circle-arrow-down"></i>
+									<p>Gate</p>
+								</div>
 								{/* down end  */}
 							</div>
 							{/* layout-1 end */}
