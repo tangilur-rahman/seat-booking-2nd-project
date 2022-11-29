@@ -829,7 +829,70 @@ const BoysLab = ({ setBoysLabB, setSelectedLab }) => {
 							{/* layout-3 end */}
 
 							{/* layout-4 start  */}
-							<div className="layout">layout4</div>
+							<div className="layout" id="when-layout-4">
+								<div id="up"></div>
+								<div id="down">
+									{getDocs
+										.map((value, index) => {
+											return (
+												<span
+													key={index}
+													onClick={() =>
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? setBooked(value)
+																: setId(value._id)
+															: setId(value._id)
+													}
+													className={
+														new Date().getTime() < value?.days_left
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  ) !== 0
+																? "active"
+																: ""
+															: ""
+													}
+												>
+													{new Date().getTime() < value.days_left
+														? Math.abs(
+																Math.floor(
+																	value.days_left / (3600 * 24 * 1000)
+																) -
+																	Math.floor(
+																		new Date().getTime() / (3600 * 24 * 1000)
+																	)
+														  ) !== 0
+															? Math.abs(
+																	Math.floor(
+																		value.days_left / (3600 * 24 * 1000)
+																	) -
+																		Math.floor(
+																			new Date().getTime() / (3600 * 24 * 1000)
+																		)
+															  )
+															: ""
+														: ""}
+
+													{value.booking_seat}
+												</span>
+											);
+										})
+										.splice(90, 19)}
+								</div>
+							</div>
 							{/* layout-4 end */}
 						</div>
 
